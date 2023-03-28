@@ -1,11 +1,5 @@
 def initiation():
-    """
-    Set all the parameter needed.
     
-    Returns:
-    guess_log -- a empty list container of all the guesses.
-    answer -- a 4-digital number string of right answer.
-    """
     import random
     
     print('Welcome to the Cows and Bulls Game!')
@@ -15,31 +9,13 @@ def initiation():
     return guess_log, answer
 
 def get_guess(guess_log):
-    """
-    Append a new guess to the previous log.
     
-    Arguments:
-    guess_log -- a list contain all the guess(es).
-    
-    Returns:
-    guess_log -- a list contain all the guess(es).
-    """
     guess = input('Enter a number:')
     guess_log.append(guess)
     return guess_log
 
 def compare(guess, answer):
-    """
-    Compare guess and answer
     
-    Arguments:
-    guess -- a 4-digital number string of the guess.
-    answer -- a 4-digital number string of right answer.
-    
-    Returns:
-    cow -- a number of the user guessed correctly in the correct place.
-    bull -- a number of the user guessed correctly in the wrong place.
-    """
     cow = 0
     bull = 0
     for i in range(len(guess)):
